@@ -27,6 +27,7 @@
         function proses() {
             var jumlah = parseInt(document.getElementById("jumlah").value);
             var status = document.getElementById("status").value;
+            var namaBarang = document.getElementById("namaBarang").value;
             var harga;
 
             if(namaBarang==="Monitor"){
@@ -47,9 +48,11 @@
 
             var bayar = total - diskon;
 
-            document.getElementById("total").value = total.toFixed(2);
-            document.getElementById("diskon").value = diskon.toFixed(2);
-            document.getElementById("bayar").value = bayar.toFixed(2);
+            document.getElementById("harga").value = harga;
+
+            document.getElementById("total").value = total;
+            document.getElementById("diskon").value = diskon;
+            document.getElementById("bayar").value = bayar;
         }
 
         function resetForm() {
