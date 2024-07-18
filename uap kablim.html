@@ -27,7 +27,17 @@
         function proses() {
             var jumlah = parseInt(document.getElementById("jumlah").value);
             var status = document.getElementById("status").value;
-            var harga = parseFloat(document.getElementById("harga").value);
+            var harga;
+
+            if(namabarang=="Monitor"){
+                harga=1500000;
+            } else if (namabarang=="Keyboard"){
+                harga=500000;
+            } else if (namabarang=="Mouse"){
+                harga=250000;
+            } else {
+                harga=0;
+            }
 
             var total = harga * jumlah;
             var diskon = 0;
@@ -71,7 +81,6 @@
         </select>
 
         <label for="harga">Harga</label>
-        <input type="number" id="harga">
 
         <label for="total">Total</label>
         <input type="number" id="total" readonly>
